@@ -1,0 +1,1072 @@
+
+
+* {
+    scrollbar-color: #222 rgba(71, 71, 71, 0.5);
+    /*scrollbar-width: thin;*/
+}
+body {
+    background: #161923;
+    font-family: Open Sans , monospace;
+    color: white;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.scene {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+
+.cube {
+    display: flex;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+    transition: transform 0.6s;
+}
+
+.cube-face {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    opacity: 0.8;
+}
+
+.cube-face-front {
+    background-color: white;
+    border: 1px solid black;
+    transform: translate3d(0, 0, 100px);
+}
+
+.cube-face-back {
+    background-color: white;
+    border: 1px solid black;
+    transform: rotateY(180deg) translate3d(0, 0, 100px);
+}
+
+.cube-face-left {
+    background-color: white;
+    border: 1px solid black;
+    transform: rotateY(-90deg) translate3d(0, 0, 100px);
+}
+
+.cube-face-right {
+    background-color: white;
+    border: 1px solid black;
+    transform: rotateY(90deg) translate3d(0, 0, 100px);
+}
+
+.cube-face-top {
+    background-color: white;
+    border: 1px solid black;
+    transform: rotateX(90deg) translate3d(0, 0, 100px);
+}
+
+.cube-face-bottom {
+    background-color: white;
+    border: 1px solid black;
+    transform: rotateX(-90deg) translate3d(0, 0, 100px);
+}
+
+.author-outer {
+    /*height: 400px;*/
+    /*background-color: #6c63ff;*/
+
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+}
+
+.author-inner {
+    width: 98vw;
+    margin-left: 1vw;
+}
+
+.author-inner h2 {
+    margin-left: 10px;
+    font-family: SG;
+}
+
+.author-inner p {
+    background: linear-gradient(#6c63ff, #6f90fa);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    font-family: IBM Plex Mono;
+}
+
+.author {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: space-between;
+}
+
+#spinner {
+    height: 80px;
+    width: 80px;
+    animation: spin linear 1s infinite;
+}
+
+.search-btn-inner {
+    padding: 10px;
+}
+
+.dashboard {
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    background: #2F6CE5;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*.dashboard:focus{
+    background-color: #ff0f00;
+}*/
+
+.account {
+    padding: 10px;
+}
+
+.account-inner{
+    user-select: none;
+    background-color: #2F6CE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    font-family: IBM Plex Sans;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: border-radius 1s;
+    transition: width 0.1s;
+}
+.account-inner-signed{
+    background-size: cover;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    font-family: IBM Plex Sans;
+    color: transparent;
+    border-radius: 50%;
+}
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    border-radius: 10px;
+    background: #444;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+}
+
+.search-bar button {
+    border: none;
+    background: #444;
+}
+
+.search-bar input {
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    border: none;
+    background: #444;
+    color: #ffffff;
+}
+
+.dock-prop {
+    position: absolute;
+    padding-top: 400px;
+}
+
+.dock-prop-outer {
+    display: flex;
+}
+
+#topic-1 {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    left: 2.5vw;
+    width: 15vw;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #2F6CE5;
+    height: 55px;
+    text-overflow: ellipsis;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#topic-1:hover {
+    background-color: #444;
+}
+
+#topic-2 {
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    left: 22.5vw;
+    width: 15vw;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #2F6CE5;
+    height: 55px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#topic-2:hover {
+    background-color: #444;
+}
+
+#topic-3 {
+    left: 42.5vw;
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    width: 15vw;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #2F6CE5;
+    border-radius: 10px;
+    height: 55px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#topic-3:hover {
+    background-color: #444;
+}
+
+#topic-4 {
+    left: 62.5vw;
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    width: 15vw;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #2F6CE5;
+    border-radius: 10px;
+    height: 55px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#topic-4:hover {
+    background-color: #444;
+}
+
+#topic-5 {
+    position: absolute;
+    display: flex;
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    width: 15vw;
+    left: 82.5vw;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #2F6CE5;
+    border-radius: 10px;
+    height: 55px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#topic-5:hover {
+    background-color: #444;
+}
+
+.search-bar-outer {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+
+/*#########################################################################################*/
+
+.login {
+    user-select: none;
+    position: fixed;
+    overflow: scroll;
+    overflow-x: scroll;
+    scroll-width: none;
+    width: 60vw;
+    height: 90vh;
+    max-height: 600px;
+    left: 20vw;
+    bottom: 5vh;
+    background: #fff;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    color: black;
+}
+
+.signup {
+    user-select: none;
+    position: fixed;
+    color: black;
+    overflow: scroll;
+    overflow-x: hidden;
+    scroll-width: none;
+    width: 60vw;
+    height: 90vh;
+    max-height: 600px;
+    left: 20vw;
+    bottom: 5vh;
+    background: #fff;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.login-m {
+    position: fixed;
+    overflow-y: scroll;
+    user-select: none;
+    /*scroll-width: none;*/
+    width: 100vw;
+    height: 90vh;
+    bottom: 0;
+    background: #222;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: visibility 1s;
+}
+
+.signup-m {
+    user-select: none;
+    position: fixed;
+    overflow: scroll;
+    scroll-width: none;
+    width: 100vw;
+    height: 90vh;
+    bottom: 0;
+    background: #222;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: visibility 1s;
+}
+
+.login-m .login-div-1 img {
+    visibility: hidden;
+    position: absolute;
+    left: 32vw;
+    top: 50vh;
+    height: 30vh;
+}
+
+.login-m .input-1 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    border-style: none;
+    /*border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login-m .input-3 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    /*border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login-m .input-4 {
+    width: calc(100vw - 125px);
+    height: 35px;
+    border: none;
+    /*        border: 1px solid #D9D9DB;
+        box-sizing: border-box; 
+*/
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login-m .input-5 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    /*border: 1px solid #D9D9DB;
+        box-sizing: border-box;*/
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login-m .input-6 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login-m .input-7 {
+    width: calc(100vw - 125px);
+    height: 35px;
+    border: none;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.login-m .login-div-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.login-m .create-outer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.login-m .create {
+    width: calc( 100vw - 70px);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+    height: 40px;
+    background: #2F6CE5;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-m .go-but {
+    width: calc( 100vw - 70px);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+
+/**/
+
+.login-m .close-btn {
+    float: right;
+    padding: 10px;
+}
+
+.signup-m .close-btn {
+    float: right;
+    padding: 10px;
+}
+
+.close-btn {
+    float: right;
+    padding: 10px;
+}
+
+.signup-m .login-div-1 img {
+    visibility: hidden;
+    position: absolute;
+    left: 32vw;
+    top: 50vh;
+    height: 30vh;
+}
+
+.signup-m .input-1 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    border-style: none;
+    /*border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.signup-m .input-3 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    /*border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.signup-m .input-4 {
+    width: calc(100vw - 125px);
+    height: 35px;
+    border: none;
+    /*        border: 1px solid #D9D9DB;
+        box-sizing: border-box; 
+*/
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.signup-m .input-5 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    /*border: 1px solid #D9D9DB;
+        box-sizing: border-box;*/
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.signup-m .input-6 {
+    width: calc(100vw - 100px);
+    height: 35px;
+    border: none;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.signup-m .input-7 {
+    width: calc(100vw - 125px);
+    height: 35px;
+    border: none;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    background-color: #222;
+    color: #ffffff;
+}
+
+.signup-m .login-div-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.signup-m .create-outer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.signup-m .create {
+    width: calc( 100vw - 70px);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+    height: 40px;
+    background: #2F6CE5;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup-m .go-but {
+    width: calc( 100vw - 70px);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5);
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.login-m .account-inter {
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.signup-m .account-inter {
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.navbar {
+    user-select: none;
+        scrollbar-width: none;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        /*align-items: center;*/
+        height: 600px;
+        width: 100vw;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        /*filter: drop-shadow(0 0 0.2rem greenyellow);*/
+}
+@media ( orientation: landscape) {
+    
+canvas{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index:-1;
+    opacity:0.5;
+}
+    .search-bar {
+        display: flex;
+        width: 30vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #444;
+        border-radius: 10px;
+        background: #444;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #ffffff;
+    }
+    .search-bar button {
+        border: none;
+        background: #444;
+    }
+    .search-bar input {
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        width: 30vw;
+        border: none;
+        background: #444;
+        color: #ffffff;
+    }
+    .div-spin {
+        top: 40vh;
+        left: 45vw;
+        
+        position: fixed;
+        height: 90px;
+        width: 90px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .flap-box {
+        visibility: hidden;
+        display: none;
+    }
+    .search-btn {
+        display: none;
+    }
+    .imageback {
+        width: 100vw;
+        display: flex;
+        position: absolute;
+        filter: opacity(40%);
+    }
+    .dashboard {
+        visibility: hidden;
+    }
+    /*#######################################################*/
+    .account {
+        position: absolute;
+        right: 2vw;
+    }
+    .account-inter {
+        color: black;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .close-btn {
+        border-radius: 50%;
+        background-color: #222;
+        cursor: pointer;
+        float: right;
+    }
+    .create-outer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .create {
+        width: 25vw;
+        height: 40px;
+        background: #2F6CE5;
+        border-radius: 20px;
+        border: none;
+        color: #ffffff;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    .go-but {
+        width: 25vw;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+    .user-legend {
+        display: flex;
+        width: 25vw;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: #2F6CE5;
+        border-radius: 10px;
+        justify-content: space-between;
+    }
+    .input-1 {
+        width: 25vw;
+        height: 35px;
+        border: none;
+        /*        border: 1px solid #D9D9DB;
+        box-sizing: border-box; 
+*/
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .input-3 {
+        width: 25vw;
+        height: 35px;
+        border: none;
+        /*        border: 1px solid #D9D9DB;
+        box-sizing: border-box; 
+*/
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .input-4 {
+        width: 20vw;
+        height: 35px;
+        /* border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+        border: none;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .input-5 {
+        width: 25vw;
+        height: 35px;
+        border: none;
+        /*        border: 1px solid #D9D9DB;
+        box-sizing: border-box;
+*/
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .input-6 {
+        width: 25vw;
+        height: 35px;
+        border: none;
+        /*border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .input-7 {
+        width: 20vw;
+        height: 35px;
+        border: none;
+        /* border: 1px solid #D9D9DB;
+        box-sizing: border-box; */
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .login-div-1 img {
+        position: absolute;
+        left: 35vw;
+        top: 15vh;
+        height: 40vh;
+        max-height: 250px;
+    }
+    .login-div-2 {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .login-div-2 img {
+        left: 34vw;
+        top: 8vh;
+        height: 10vh;
+    }
+    .have {
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #000;
+    }
+    .signin-info {
+        color: #000;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .signin {
+        color: #2F6CE5;
+        cursor: pointer;
+    }
+    .account-info {
+        color: #000;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    /*##################################################################*/
+    svg {
+        font-family: SG;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    svg text {
+        /*text-transform: uppercase;*/
+        animation: stroke 5s infinite alternate;
+        stroke-width: 2;
+        stroke: #365fa0;
+        font-size: 100px;
+    }
+    @keyframes stroke {
+        0% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: lime;
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: cyan;
+        }
+        90% {
+            fill: rgba(72, 138, 20, 0);
+            stroke: crimson;
+            stroke-width: 3;
+        }
+        100% {
+            fill: greenyellow;
+            stroke: rgba(54, 95, 160, 0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+}
+.me {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background: url(https://thelinuxpoint.github.io/Untitled.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+    border-style: groove;
+}
+
+
+/*##################################################################################*/
+
+@media ( orientation: portrait) {
+     
+    canvas{
+        position: fixed;
+        opacity:0.5;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        z-index:-1;
+    }
+    .imageback {
+        visibility: hidden;
+        display: none;
+    }
+    .div-spin {
+        top: 40vh;
+        left: 38vw;
+        position: fixed;
+        height: 90px;
+        width: 90px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        background: #282d3f;
+        height: 70px;
+        width: 100vw;
+        border-bottom-right-radius: 10px ;
+        border-bottom-left-radius: 10px ;
+        filter: drop-shadow(2px 2px 0.8rem black);
+    }
+    .flap-box {
+        overflow-y: scroll;
+        overflow-x: scroll;
+        position: fixed;
+        right: 100vw;
+        background-color: #282d3f;
+        width: 70vw;
+        top: 70px;
+        height: calc(100vh - 60px);
+        transition: right 0.5s;
+        box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    /*###########################################################################*/
+    .have {
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        color: #ffffff;
+    }
+    .signin-info {
+        color: #ffffff;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .signin {
+        color: #2F6CE5;
+        cursor: pointer;
+    }
+    .account-info {
+        color: #ffffff;
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .user-legend {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100vw - 100px);
+        font-family: IBM Plex Sans;
+        font-weight: 600;
+        font-size: 15px;
+        color: #2F6CE5;
+        border-radius: 10px;
+    }
+    .login-div-2 img {
+        left: 50px;
+        bottom: 10vh;
+        height: 10vh;
+    }
+    /**/
+    #head-learn-skills {
+        display: flex;
+        justify-content: center;
+        background-color: #2F6CE5;
+        border-radius: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-family: IBM Plex Sans;
+        color: #ffffff;
+        font-size: 25px;
+    }
+    .learn-skills-inner {
+        padding-left: 25px;
+        font-family: IBM Plex Sans;
+        color: #ffffff;
+        font-size: 18px;
+    }
+    .dock-prop {
+        visibility: hidden;
+        display: none;
+    }
+    svg{
+        visibility: hidden;
+    }
+}
+

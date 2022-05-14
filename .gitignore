@@ -9,8 +9,9 @@
 /coverage
 
 # production
-/build
 /public
+/src
+/build
 package-lock.json
 package.json
 yarn.lock

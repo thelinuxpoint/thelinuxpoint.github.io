@@ -37,7 +37,7 @@ import {EthIntro,HomeEth,EthReconTools} from "./Content/IT/eth";
 //ML folder
 import {HomeProb,ProbIntro,ProbFunc} from "./Content/ML/statistics";
 import {HomeMac,MacAlIntro,MacAlLinear,MacAlDecision,MacAlSVM} from "./Content/ML/algorithms";
-import {HomeNeural,NeuralIntro} from "./Content/ML/neural";
+import {HomeNeural,NeuralIntro,NeuralDim,NeuralAct} from "./Content/ML/neural";
 
 //Java folder
 import HomeJava from "./Content/Java/HomeJava";
@@ -417,7 +417,13 @@ class App extends React.Component{
                         <Switch>
                             <Route path="/machine/neural/introduction">
                                 <NeuralIntro/>
-                            </Route>                        
+                            </Route> 
+                            <Route path="/machine/neural/dimension">
+                                <NeuralDim/>
+                            </Route>
+                            <Route path="/machine/neural/activation">
+                                <NeuralAct/>
+                            </Route>                     
                         </Switch>
                         <HomeNeural/>
 

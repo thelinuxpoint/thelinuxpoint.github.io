@@ -9,12 +9,8 @@
 /coverage
 
 # production
-/public
-/src
-/build
-package-lock.json
-package.json
-yarn.lock
+
+build
 # misc
 .DS_Store
 .env.local

@@ -5,6 +5,8 @@ import Head from "../../Components/Header";
 import ReactEmbedGist from 'react-embed-gist';
 import Shell from "../../Components/Shell";
 import MathJax from 'react-mathjax';
+import { Helmet } from 'react-helmet';
+
 function slideIN(){
 	if(window.innerHeight>window.innerWidth){
 		document.getElementsByClassName('flap-neural')[0].style.left="-300px";
@@ -51,11 +53,15 @@ function FlapNeural(props){
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink onClick={slideIN} to="/machine/algo/introduction" className="descr" ><p>Perceotron</p></NavLink>
+				<NavLink onClick={slideIN} to="/machine/neural/perceptron" className="descr" ><p>Perceptron</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink onClick={slideIN} to="/machine/algo/introduction" className="descr" ><p>Activation Function</p></NavLink>
+				<NavLink onClick={slideIN} to="/machine/neural/activation" className="descr" ><p>Activation Function</p></NavLink>
+			</div>
+			<hr/>
+			<div className="topic">
+				<NavLink onClick={slideIN} to="/machine/neural/dimension" className="descr" ><p>Dimension Reduction</p></NavLink>
 			</div>
 			<hr/>
 			<Author/>
@@ -108,6 +114,11 @@ function NeuralIntro(props){
 	return(
 		<>
 			<br/>
+			<Helmet>
+        		<title>Neural Networks</title>
+        		<meta name="description" content="Learn basics about neural networks"/>
+	      	</Helmet>
+	      	
 			<Head name="Introduction"/>
 			<Mark desc=""/>
 			<Head name="The Perceptron"/>
@@ -118,5 +129,50 @@ function NeuralIntro(props){
 		</>
 	);
 }
+function NeuralAct(props){
+	window.scrollTo(0,0);
+	return(
+		<>
+			<br/>
+			<Helmet>
+        		<title>Activation Functions - Neural Network</title>
+        		<meta name="description" content="Learn about activation functions" />
+	      	</Helmet>
+			<Head name="Sigmoid"/>
+			<Mark desc=""/>
 
-export {HomeNeural,NeuralIntro}
+
+			<br/>
+			<Navigator left="/" right="/machine/algo/linear"/>
+
+		</>
+	);
+}
+function NeuralDim(props){
+	window.scrollTo(0,0);
+	return(
+		<>
+			<br/>
+			<Helmet>
+        		<title>Dimension Reduction - Neural Network</title>
+        		<meta name="description" content="Learn about dimension reduction" />
+	      	</Helmet>
+			<Head name="SVD (Singular Value Decomposition)"/>
+			<Mark desc="⌾ How it Works?"/>
+
+
+			<Head name="PCA (Principle Component Analysis)"/>
+			<Mark desc="PCA is a transformation procedure that converts a data matrix with possibly correlated features into a set of linearly uncorrelated variables called principal components.
+				As there are as many principal components as there are variables in the data, principal components are constructed in such a manner that the first principal component accounts for the largest possible variance
+			"/>
+
+			<br/>
+			<div align="center"><img style={{borderRadius:"10px",filter:"invert(0.1)"}} src="https://thelinuxpoint.github.io/pca.gif" className="put-in-side-code"/></div>
+			
+			<br/>
+			<Navigator left="/" right="/machine/algo/linear"/>
+
+		</>
+	);
+}
+export {HomeNeural,NeuralIntro,NeuralDim,NeuralAct}

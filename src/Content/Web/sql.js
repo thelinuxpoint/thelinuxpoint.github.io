@@ -188,6 +188,8 @@ function SqlTable(props){
 	      	</Helmet>
 			<br/>
 			<Head id="" name="Creating Table in MySQL"/>
+			<Mark desc="Tables are called as the entity or relation"/>
+
 			<Mark desc="tlp:red CREATE tlp:red TABLE Persons ( tlp:br
     			tlp:tab PersonID tlp:tab tlp:cyan  int , tlp:br
     			tlp:tab LastName tlp:tab varchar(255) , tlp:br

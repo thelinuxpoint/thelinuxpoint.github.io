@@ -443,6 +443,7 @@ table{
     border: 2px solid grey;
     border-radius: 5px;
     background-color: grey;
+
     /*box-shadow: 1px 1px 10px 5px honeydew;*/
 }
 .tad {
@@ -458,6 +459,7 @@ table{
 tfoot {
     background-color: #636cff;
     color: #fff;
+
 }
 th{
 	padding: 10px;

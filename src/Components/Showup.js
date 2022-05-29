@@ -148,12 +148,6 @@ function Showup(argument) {
 				</div>
 				<div className="show-up-inner-0">
 					<div>
-						<img alt="..." src="rails.png" style={{width:"220px",height:"200px"}}/>
-					</div>
-					<NavLink className="descr" to="/web/rails"><button>  Go ❱❱ </button></NavLink>
-				</div>
-				<div className="show-up-inner-0">
-					<div>
 						<img alt="..." src="html5.png" style={{width:"200px",height:"200px"}}/>
 					</div>
 					<NavLink className="descr" to="/web/html"><button>  Go ❱❱ </button></NavLink>
@@ -453,7 +447,7 @@ function Author(){
             <div className="author-inner">
             <hr style={{height:"2px",backgroundColor:"white"}}/>
             <h2> About Author :</h2>
-            <p>Hello Geeks! my name is <span style={{color:"darkblue"}}>Prakash Choudhary</span>, I Am a EXTC Engineer who builded this Website for user like me struggling to find proper source to learn from.</p>
+            <p>Hello Readers! my name is <span style={{color:"orange"}}>Prakash Choudhary</span>, I Am a Electronics Telecommunication Engineer who builded this Website to put all the IT Related content at the same place. This is a big project and thus it will require some time to complete.</p>
             <br/>
             <div className="author">
             <div draggable={false} className="" title="Visit YouTube Channel" onClick={function(){

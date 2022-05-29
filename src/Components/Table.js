@@ -25,7 +25,7 @@ class Table extends React.Component{
 					local_str+=k+" "
 					console.log(local_str)
 				}else{
-					this.elements.push(<td className="tad">{k}</td>);
+					this.elements.push(<td colSpan="1" className="tad">{k}</td>);
 				}
 			}
 		}
@@ -44,7 +44,7 @@ class Table extends React.Component{
     					{this.elements}	
     				</tbody>
 				</table>
-
+				<br/>
 				
 			</>
 		);

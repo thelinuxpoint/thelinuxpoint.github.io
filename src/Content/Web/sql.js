@@ -5,6 +5,8 @@ import Head from "../../Components/Header";
 import ReactEmbedGist from 'react-embed-gist';
 import Shell from "../../Components/Shell";
 import Table from "../../Components/Table";
+import { Helmet } from 'react-helmet';
+
 function Author(){
     return(
         <div  style={{color:"white",fontSize:"17px",display:"flex",justifyContent:"space-between",padding:"10px"}}>
@@ -23,6 +25,7 @@ function Author(){
         </div>
     );
 }
+
 function slideIN(){
 	if(window.innerHeight>window.innerWidth){
 		document.getElementsByClassName('flap-sql')[0].style.left="-300px";
@@ -36,6 +39,7 @@ function slideIN(){
             	}
 	}
 }
+
 function Navigator(props){
 	return(
 		<>
@@ -59,31 +63,31 @@ function FlapSql(props){
 			</div>			
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/home" className="descr"><p>Introduction</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/home" className="descr"><p>Introduction</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/" className="descr"><p>Data Types</p></NavLink>
+				<NavLink onClick={slideIN}  to="/web/sql/" className="descr"><p>Data Types</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/create" className="descr"><p>Create & Drop DB</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/create" className="descr"><p>Create & Drop DB</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/table" className="descr"><p>Create Table</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/table" className="descr"><p>Create Table</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/" className="descr"><p>Select</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/" className="descr"><p>Select</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/" className="descr"><p>Conditional</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/" className="descr"><p>Conditional</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink to="/web/sql/" className="descr"><p>Insert Into</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/" className="descr"><p>Insert Into</p></NavLink>
 			</div>
 			<hr/>
 
@@ -125,6 +129,11 @@ function HomeSql(props){
 function SqlIntro(props){
 	return(
 		<>
+			<Helmet>
+        		<title>MySQL - Introduction</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
 			<Head id="" name="Introduction to MySQL"/>
 			<Mark desc=" MySQL, the most popular Open Source SQL database management system, is developed, distributed, and supported by Oracle Corporation. The MySQL website ( tlp:cyan http://www.mysql.com/ ) provides the latest information about MySQL software. "/>
 			<Mark desc="For Debian-based Linux platforms, MySQL can be installed using the MySQL APT Repository."/>
@@ -141,13 +150,17 @@ function SqlIntro(props){
 function SqlCreate(props){
 	return(
 		<>
+			<Helmet>
+        		<title>MySQL - CREATE DATABASE</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
 			<Head id="" name="Creating Database in MySQL"/>
 			<Mark desc="Under Unix, database names are case-sensitive (unlike SQL keywords), so you must always refer to your database as myDB, not as MYDB, MyDB, or some other variant. This is also true for table names. (Under Windows, this restriction does not apply, although you must refer to databases and tables using the same lettercase throughout a given query. However, for a variety of reasons, the recommended best practice is always to use the same lettercase that was used when the database was created.) "/>
 			<Shell desc="tlp:red CREATE tlp:red DATABASE myDB;"/>
 
-			<Mark desc="creating a database does not select it so we have to use the  tlp:red use command to make myDB as your current database."/>
+			<Mark desc="creating a database does not select it so we have to use the  tlp:red use command to make myDB as your current database. tlp:br no need of semicolon at the end in use command."/>
 			<Shell desc="tlp:red USE myDB"/>
-			<Mark desc="no need of semicolon at the end in use command."/>
 			<Mark desc="You can view you database by using the following command:"/>
 			<Shell desc="tlp:red SHOW tlp:red DATABASES ;"/>			
 			<Mark desc="# RESULT"/>
@@ -160,7 +173,7 @@ function SqlCreate(props){
 
 			<Table head="Database" colsp={1} desc="-   |"/>
 			<Mark desc="tlp:cyan Note : Be careful before dropping a database. Deleting a database will result in loss of complete information stored in the database!"/>
-<br/>
+			<br/>
 			<Navigator left="" right=""/>
 
 		</>
@@ -169,8 +182,20 @@ function SqlCreate(props){
 function SqlTable(props){
 	return(
 		<>
+			<Helmet>
+        		<title>MySQL - CREATE TABLE</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
 			<Head id="" name="Creating Table in MySQL"/>
-
+			<Mark desc="tlp:red CREATE tlp:red TABLE Persons ( tlp:br
+    			tlp:tab PersonID tlp:tab tlp:cyan  int , tlp:br
+    			tlp:tab LastName tlp:tab varchar(255) , tlp:br
+    			tlp:tab FirstName tlp:tab varchar(255) tlp:br
+			);"/>
+			<Shell desc="tlp:red SELECT tlp:org * tlp:red FROM Persons;"/>			
+			<Table head="Database (myDB)" colsp={3} desc="- PersonID | - LastName | - FirstName |"/>
+			<Mark desc=""/>
 
 
 		</>

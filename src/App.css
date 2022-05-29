@@ -6,7 +6,7 @@
 }
 body {
     background: #161923;
-    font-family: Open Sans , monospace;
+    font-family: Open Sans ;
     color: white;
     background-attachment: fixed;
     background-position: center;
@@ -943,7 +943,7 @@ canvas{
     border-radius: 50%;
     height: 150px;
     width: 150px;
-    background: url(https://thelinuxpoint.github.io/Untitled.jpg);
+    background: url(https://thelinuxpoint.github.io/uu.jpg);
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center;

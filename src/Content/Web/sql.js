@@ -67,7 +67,7 @@ function FlapSql(props){
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink onClick={slideIN}  to="/web/sql/" className="descr"><p>Data Types</p></NavLink>
+				<NavLink onClick={slideIN}  to="/web/sql/datatypes" className="descr"><p>Data Types</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
@@ -79,15 +79,15 @@ function FlapSql(props){
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink onClick={slideIN} to="/web/sql/" className="descr"><p>Select</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/select" className="descr"><p>Select</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink onClick={slideIN} to="/web/sql/" className="descr"><p>Conditional</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/logical" className="descr"><p>Logical Operators</p></NavLink>
 			</div>
 			<hr/>
 			<div className="topic">
-				<NavLink onClick={slideIN} to="/web/sql/" className="descr"><p>Insert Into</p></NavLink>
+				<NavLink onClick={slideIN} to="/web/sql/insert" className="descr"><p>Insert Into</p></NavLink>
 			</div>
 			<hr/>
 
@@ -157,22 +157,23 @@ function SqlCreate(props){
 			<br/>
 			<Head id="" name="Creating Database in MySQL"/>
 			<Mark desc="Under Unix, database names are case-sensitive (unlike SQL keywords), so you must always refer to your database as myDB, not as MYDB, MyDB, or some other variant. This is also true for table names. (Under Windows, this restriction does not apply, although you must refer to databases and tables using the same lettercase throughout a given query. However, for a variety of reasons, the recommended best practice is always to use the same lettercase that was used when the database was created.) "/>
-			<Shell desc="tlp:red CREATE tlp:red DATABASE myDB;"/>
+			<Shell desc="tlp:lime CREATE tlp:lime DATABASE myDB;"/>
 
-			<Mark desc="creating a database does not select it so we have to use the  tlp:red use command to make myDB as your current database. tlp:br no need of semicolon at the end in use command."/>
-			<Shell desc="tlp:red USE myDB"/>
+			<Mark desc="creating a database does not select it so we have to use the  tlp:lime use command to make myDB as your current database. tlp:br no need of semicolon at the end in use command."/>
+			<Shell desc="tlp:lime USE myDB"/>
 			<Mark desc="You can view you database by using the following command:"/>
-			<Shell desc="tlp:red SHOW tlp:red DATABASES ;"/>			
+			<Shell desc="tlp:lime SHOW tlp:lime DATABASES ;"/>			
 			<Mark desc="# RESULT"/>
 
 			<Table head="Database" colsp={1} desc="- myDB |"/>
 			<Head id="" name="Droping Database in MySQL"/>
-			<Mark desc="The tlp:red DROP tlp:red DATABASE statement is used to drop an existing SQL database."/>
-			<Shell desc="tlp:red DROP tlp:red DATABASE myDB;"/>			
+			<Mark desc="The tlp:lime DROP tlp:lime DATABASE statement is used to drop an existing SQL database."/>
+			<Shell desc="tlp:lime DROP tlp:lime DATABASE myDB;"/>			
 			<Mark desc="# RESULT"/>
 
 			<Table head="Database" colsp={1} desc="-   |"/>
 			<Mark desc="tlp:cyan Note : Be careful before dropping a database. Deleting a database will result in loss of complete information stored in the database!"/>
+			
 			<br/>
 			<Navigator left="" right=""/>
 
@@ -188,19 +189,102 @@ function SqlTable(props){
 	      	</Helmet>
 			<br/>
 			<Head id="" name="Creating Table in MySQL"/>
-			<Mark desc="Tables are called as the entity or relation"/>
+			<Mark desc="Tables are called as the tlp:cyan entity. The row of a table is called as TUPLE or RECORD and columns are called as tlp:cyan attributes."/>
 
-			<Mark desc="tlp:red CREATE tlp:red TABLE Persons ( tlp:br
+			<Mark desc="tlp:lime CREATE tlp:lime TABLE Person ( tlp:br
     			tlp:tab PersonID tlp:tab tlp:cyan  int , tlp:br
     			tlp:tab LastName tlp:tab varchar(255) , tlp:br
     			tlp:tab FirstName tlp:tab varchar(255) tlp:br
 			);"/>
-			<Shell desc="tlp:red SELECT tlp:org * tlp:red FROM Persons;"/>			
+			<Shell desc="tlp:lime SELECT tlp:org * tlp:lime FROM Person;"/>			
 			<Table head="Database (myDB)" colsp={3} desc="- PersonID | - LastName | - FirstName |"/>
-			<Mark desc=""/>
+			<Mark desc="Now lets add some data to the table Person tlp:br tlp:br 
+			tlp:lime INSERT tlp:lime INTO Person (PersonID, LastName, FirstName)
+			tlp:lime VALUES ( 1 , tlp:yellow 'Choudhary' , tlp:yellow 'Prakash' );	
+
+
+			"/>
+			<Head name="Creating Table With Constraints"/>
+			<Mark desc=" tlp:lime CREATE tlp:lime TABLE Person ( tlp:br
+    		tlp:tab PersonID tlp:tab int tlp:red NOT tlp:red NULL , tlp:br
+    		tlp:tab LastName tlp:tab varchar(255) tlp:red NOT tlp:red NULL , tlp:br
+    		tlp:tab FirstName tlp:tab varchar(255) tlp:red NOT tlp:red NULL tlp:br
+			); "/>
+			<br/>
+			<Navigator left="" right=""/>
 
 
 		</>
 	);
 }
-export {HomeSql,SqlIntro,SqlCreate,SqlTable};
+function SqlLogical(props){
+	return(
+		<>
+			<Helmet>
+        		<title>MySQL - LOGICAL OPERATIONS</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
+			<Mark desc=""/>
+			<br/>
+			<Navigator left="" right=""/>
+
+
+		</>
+	);
+}
+
+function SqlOperator(props){
+	return(
+		<>
+			<Helmet>
+        		<title>MySQL - Operators</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
+			
+			<br/>
+			<Navigator left="" right=""/>
+
+
+		</>
+	);
+}
+function SqlWhere(props){
+	return(
+		<>
+			<Helmet>
+        		<title>MySQL - WHERE CLAUSE</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
+			
+			<br/>
+			<Navigator left="" right=""/>
+
+
+		</>
+	);
+}
+function SqlSelect(props){
+	return(
+		<>
+			<Helmet>
+        		<title>MySQL - SELECT</title>
+        		<meta name="description" content="Learn basics about sql"/>
+	      	</Helmet>
+			<br/>
+			
+			<br/>
+			<Navigator left="" right=""/>
+
+
+		</>
+	);
+}
+
+export 
+{
+	HomeSql,SqlIntro,SqlCreate,SqlTable,SqlOperator,
+	SqlWhere,SqlSelect,SqlLogical
+};

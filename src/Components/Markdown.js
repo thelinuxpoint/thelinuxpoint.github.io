@@ -29,7 +29,7 @@ class Mark extends React.Component{
 
 				continue
 			}else if(i==="tlp:red"){
-				color="crimson";
+				color="red";
 				continue
 			}else if(i==="tlp:org"){
 				color="orange";

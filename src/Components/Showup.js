@@ -17,11 +17,11 @@ function Showup(argument) {
 			</div>
 		</div>
 		<p className="show-up-desc">Pick up Your Favourite Programming Language From Below and start Learning</p>
-		<div className="skills-inner" align="center">
+		{/* <div className="skills-inner" align="center">
 			<div>
 				<img src="prog.svg"/ >
 			</div>
-		</div>
+		</div> */}
 
 		<div className="show-up" id="programming" onMouseMove={function(x){
 			if ((window.innerWidth-x.nativeEvent.x)<=80){
@@ -108,11 +108,11 @@ function Showup(argument) {
 		</div>
 		<p className="show-up-desc">Start Your Journey of WEB Development using the skills below</p>
 
-		<div className="skills-inner" align="center">
+		{/* <div className="skills-inner" align="center">
 			<div>
 				<img src="web_ill.svg"/ >
 			</div>
-		</div>
+		</div> */}
 		<div className="show-up" onMouseMove={function(x){
 			if ((window.innerWidth-x.nativeEvent.x)<=80){
 				document.getElementById('scroll-we-b').style.visibility="visible";
@@ -185,11 +185,11 @@ function Showup(argument) {
 				<Head name="Information Technology"/>
 			</div>
 		</div>	
-		<div className="skills-inner" align="center">
+		{/* <div className="skills-inner" align="center">
 			<div>
 				<img src="IT.svg"/ >
 			</div>
-		</div>
+		</div> */}
 		<div className="show-up" onMouseMove={function(x){
 			if ((window.innerWidth-x.nativeEvent.x)<=80){
 				document.getElementById('scroll-it-b').style.visibility="visible";
@@ -261,11 +261,11 @@ function Showup(argument) {
 			</div>
 		</div>
 
-		<div className="skills-inner" align="center">
+		{/* <div className="skills-inner" align="center">
 			<div>
 				<img src="ml.svg" />
 			</div>
-		</div>
+		</div> */}
 
 		<div className="show-up" onMouseMove={
 			function(x){
@@ -346,11 +346,11 @@ function Showup(argument) {
 				<Head name="Embedded Tools"/>
 			</div>
 		</div>
-		<div className="skills-inner" align="center">
+		{/* <div className="skills-inner" align="center">
 			<div>
 				<img src="firmware.svg"/ >
 			</div>
-		</div>
+		</div> */}
 		<div className="show-up" onMouseMove={function(x){
 			var c = document.getElementsByClassName('show-up')[4];
 
@@ -395,11 +395,11 @@ function Showup(argument) {
 			</div>
 		</div>
 
-		<div className="skills-inner" align="center">
+		{/* <div className="skills-inner" align="center">
 			<div>
 				<img src="cryptocur.svg"/ >
 			</div>
-		</div>
+		</div> */}
 
 		<div className="show-up" onMouseMove={function(x){
 			var c = document.getElementsByClassName('show-up')[5];

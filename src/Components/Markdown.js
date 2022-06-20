@@ -35,10 +35,10 @@ class Mark extends React.Component{
 				color="orange";
 				continue
 			}else if(i==="tlp:cyan"){
-				color="cyan";
+				color="#76a3ff";
 				continue
 			}else if(i==="tlp:yellow"){
-				color="yellow";
+				color="#afaf08";
 				continue
 			}else if(i==="tlp:lime"){
 				color="lime";

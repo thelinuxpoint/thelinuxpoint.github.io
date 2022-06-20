@@ -422,11 +422,13 @@ top:-10px;
 	font-size: 15px;
 	border-radius: 10px;
 }.shell-boxx{
-	background-color: #333;
+	background: black;
 	padding: 10px;
 	border-radius: 10px;
+	border: 3px solid #2F6CE5 ;
 	font-family: monospace;
 	font-size: 15px;
+	word-break: keep-all;
 }
 .head-down-desc::before{
 	content: "# ";

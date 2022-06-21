@@ -66,9 +66,9 @@ canvas.setAttribute('height', style_height * dpi);
 canvas.setAttribute('width', style_width * dpi);
 }
 
-    var particle_count = 70,
+    var particle_count = 45,
         particles = [],
-        couleurs   = ["#3a0088", "#930077", "#e61c5d","#ffbd39"];
+        couleurs   = ["orange", "cyan", "yellowgreen","magenta"];
     function Particle()
     {
 
@@ -171,7 +171,6 @@ canvas.setAttribute('width', style_width * dpi);
             }
             requestAnimationFrame(animate);
         }
-   
         animate(); 
 }
 
@@ -255,16 +254,16 @@ function NavBar(props) {
 
                 {MySvg}
                 
-                {/*<div className="search-bar-outer" align="center">
+                <div className="search-bar-outer" align="center">
                     <div className="search-bar">
                         <button><img alt="..." src="Vector.png"/></button>
                         <input placeholder="Search in The Linux Point"/>
                     </div>
-                </div>*/}
+                </div>
                    {/* <InstantSearch searchClient={searchClient} indexName="thelinuxpoint">
                         <SearchBox/>
                         <Hits/>
-                    </InstantSearch> */}
+            </InstantSearch>*/}
 
                 <div className="account">
                     <div className="account-inner" onClick={props.handler}>

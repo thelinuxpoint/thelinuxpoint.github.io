@@ -20,6 +20,8 @@ import Flap from "./Components/Flap";
 //cpp folder
 import HomeCpp from "./Content/Cpp/HomeCpp";
 import IntroCpp from "./Content/Cpp/IntroCpp";
+import CppKeywords from "./Content/Cpp/CppKeywords";
+
 //php folder
 import HomePHP from "./Content/PHP/phphome";
 import IntroPHP from "./Content/PHP/phpintro";
@@ -297,7 +299,9 @@ class App extends React.Component{
                             <Route path="/cpp/intro">
                                 <IntroCpp/>
                             </Route>
-
+                            <Route path="/cpp/keywords">
+                                <CppKeywords/>
+                            </Route>
                         </Switch>
                         <HomeCpp/>
                     </Route>
@@ -428,6 +432,7 @@ class App extends React.Component{
                         <HomeNeural/>
 
                     </Route>
+
                     {/*Java Programming Starts here*/}
                     <Route path="/java"> 
                         <Route exact path="/java">
@@ -435,6 +440,7 @@ class App extends React.Component{
                         </Route>
                         <HomeJava/>
                     </Route>
+
                     {/**/}
                     <Route path="/linuxcommand"> 
                         <Route exact path="/linuxcommand">

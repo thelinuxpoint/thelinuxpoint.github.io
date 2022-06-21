@@ -671,15 +671,18 @@ body {
 
 .navbar {
     user-select: none;
+
         scrollbar-width: none;
+        margin-left: 10px;
+        margin-right: 10px;
+        background: rgba(75, 75, 155, 0.5);
         overflow-y: hidden;
         overflow-x: hidden;
-        top: 0;
         display: flex;
         justify-content: space-between;
-        /*align-items: center;*/
-        height: 600px;
-        width: 100vw;
+        /* align-items: center; */
+        height: 700px;
+        width: calc(100vw - 20px);
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         /*filter: drop-shadow(0 0 0.2rem greenyellow);*/

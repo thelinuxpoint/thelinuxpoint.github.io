@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 
 
 function Card(props){
+	
 	return (
 	<>
 	<div className="card-out"align="center">

@@ -993,6 +993,8 @@ canvas{
         background: #282d3f;
         height: 70px;
         width: 100vw;
+        margin-left: 0px;
+        margin-right: 0px;
         border-bottom-right-radius: 10px ;
         border-bottom-left-radius: 10px ;
         filter: drop-shadow(2px 2px 0.8rem black);

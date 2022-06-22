@@ -63,9 +63,9 @@ export default function IntroCpp(){
 			 tlp:yellow #ifdef tlp:yellow  __cplusplus tlp:br
 			 tlp:tab } tlp:br
 			 tlp:yellow #endif 
-			tlp:codee
-			tlp:br now lets decleare this function in library.cpp file as tlp:br
-			tlp:br
+			tlp:codee '/>
+			<Mark desc='now lets decleare this function in library.cpp file as follows 
+			tlp:br tlp:br
 			tlp:codes
 			# // # library.cpp tlp:br tlp:br
 			tlp:red #include tlp:yellow "library.hpp" tlp:br
@@ -75,20 +75,21 @@ export default function IntroCpp(){
 				tlp:tab return x+y; tlp:br
 			} 
 			tlp:br
-			tlp:codee	
+			tlp:codee
 			'/>
+
 			<Shell desc="tlp:cyan g++ -c library.cpp -o library.o tlp:br tlp:br tlp:lime ~$ tlp:cyan ar rcs liblibrary.a library.o"/>
 			<Mark desc='Now since liblibrary.a file is generated you can use it in the main program as following
 			tlp:br tlp:br 
 			tlp:codes
 			# // # main.cpp tlp:br tlp:br
 				tlp:red #include tlp:yellow <iostream> tlp:br
-				tlp:red #include tlp;yellow "library.hpp" tlp:br tlp:br
+				tlp:red #include tlp:yellow "library.hpp" tlp:br tlp:br
 
 				tlp:cyan int main() { tlp:br
-					tlp:tab int x = add(1,5); tlp:br
-					tlp:tab std::cout<<"1 + 5 = "<<x<<std::endl; tlp:br
-					tlp:tab return 0; tlp:br
+					tlp:tab tlp:cyan int x = add(1,5); tlp:br
+					tlp:tab std::cout<< tlp:yellow "1 tlp:yellow + tlp:yellow 5 tlp:yellow = tlp:yellow " << x <<std::endl; tlp:br
+					tlp:tab tlp:red return 0; tlp:br
 				} tlp:br 
 			tlp:codee tlp:br 
 			Now compile main.cpp and link the static file using the following command.

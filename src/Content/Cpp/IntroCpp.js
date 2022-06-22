@@ -48,7 +48,53 @@ export default function IntroCpp(){
 			<Shell desc="g++ hello.cpp tlp:br tlp:br tlp:lime ~$ ./a.out"/>
 			<Head name="Static Linking"/>
 			<Mark desc="Static Linking is the result of the linker making copy of all used library functions to the executable file. Static Linking creates larger binary files, and need more space on disk and main memory. Examples of static libraries (libraries which are statically linked) are, tlp:cyan .a files in Linux and tlp:cyan .lib files in Windows."/>
-			<Mark desc="tlp:codes tlp:codee"/>
+			<Mark desc='tlp:cyan Example tlp:br tlp:br 
+			In the Following C++ library file we will decleare a tlp:org add function which we will use it in our main program via static linking.			
+
+			tlp:br tlp:br
+			tlp:codes 
+			# // # library.hpp tlp:br tlp:br 
+			tlp:red #include tlp:yellow <iostream> tlp:br tlp:br
+			tlp:yellow #ifdef tlp:yellow __cplusplus tlp:br
+			 tlp:tab tlp:red extern tlp:yellow "C" { tlp:br
+				tlp:yellow #endif tlp:br tlp:br
+
+			 tlp:cyan int add( tlp:cyan int x, tlp:cyan int y); tlp:br tlp:br
+			 tlp:yellow #ifdef tlp:yellow  __cplusplus tlp:br
+			 tlp:tab } tlp:br
+			 tlp:yellow #endif 
+			tlp:codee
+			tlp:br now lets decleare this function in library.cpp file as tlp:br
+			tlp:br
+			tlp:codes
+			# // # library.cpp tlp:br tlp:br
+			tlp:red #include tlp:yellow "library.hpp" tlp:br
+			tlp:red #include tlp:yellow <iostream> tlp:br
+			tlp:br
+			tlp:cyan int add( tlp:cyan int x, tlp:cyan int y) { tlp:br 
+				tlp:tab return x+y; tlp:br
+			} 
+			tlp:br
+			tlp:codee	
+			'/>
+			<Shell desc="tlp:cyan g++ -c library.cpp -o library.o tlp:br tlp:br tlp:lime ~$ tlp:cyan ar rcs liblibrary.a library.o"/>
+			<Mark desc='Now since liblibrary.a file is generated you can use it in the main program as following
+			tlp:br tlp:br 
+			tlp:codes
+			# // # main.cpp tlp:br tlp:br
+				tlp:red #include tlp:yellow <iostream> tlp:br
+				tlp:red #include tlp;yellow "library.hpp" tlp:br tlp:br
+
+				tlp:cyan int main() { tlp:br
+					tlp:tab int x = add(1,5); tlp:br
+					tlp:tab std::cout<<"1 + 5 = "<<x<<std::endl; tlp:br
+					tlp:tab return 0; tlp:br
+				} tlp:br 
+			tlp:codee tlp:br 
+			Now compile main.cpp and link the static file using the following command.
+			'/>
+			<Shell desc="g++ main.cpp -L . -llibrary.a -o main"/>
+			<Mark desc="tlp:org -L indicates where to search for library files "/>
 			<Head name="Dynamic Linking"/>
 			<Mark desc="Dynamic Linking doesn’t require the code to be copied, it is done by just placing name of the library in the binary file. The actual linking happens when the program is run, when both the binary file and the library are in memory. Examples of Dynamic libraries (libraries which are linked at run-time) are .so in Linux and .dll in Windows."/>
 			<Mark desc='tlp:cyan Example tlp:br tlp:br we will create a C++ library file and use it in a C++ code.

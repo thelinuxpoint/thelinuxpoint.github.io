@@ -675,7 +675,7 @@ body {
         scrollbar-width: none;
         margin-left: 10px;
         margin-right: 10px;
-        background: rgba(75, 75, 155, 0.5);
+        background: rgba(75, 75, 155, 0.7);
         overflow-y: hidden;
         overflow-x: hidden;
         display: flex;
